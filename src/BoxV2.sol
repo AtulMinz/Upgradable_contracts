@@ -17,7 +17,13 @@ contract BoxV2 is BoxV1 {
         __UUPSUpgradeable_init();
     }
 
-    //function
+    function getValue(uint256 value) public view returns (uint256) {
+        return value;
+    }
+
+    function verison() public pure returns (string memory) {
+        return "BoxV2";
+    }
 
     function _authorizeUpgrade(address newImplementation) internal override {}
 }
